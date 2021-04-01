@@ -5,6 +5,7 @@ import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 
 import com.example.automatedtooltraybuilder.Objects.PerspectiveInteraction;
+import com.example.automatedtooltraybuilder.Objects.PreviewImageView;
 import com.example.automatedtooltraybuilder.Objects.RegularInteraction;
 import com.example.automatedtooltraybuilder.Objects.path;
 
