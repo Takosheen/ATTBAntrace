@@ -1,44 +1,57 @@
-<?xml version="1.0" encoding="utf-8"?>
-<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
-
-    <com.google.android.material.appbar.AppBarLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:theme="@style/Theme.AutomatedToolTrayBuilder.AppBarOverlay">
-
-        <androidx.appcompat.widget.Toolbar
-            android:id="@+id/toolbar"
-            android:layout_width="match_parent"
-            android:layout_height="?attr/actionBarSize"
-            android:background="?attr/colorPrimary"
-            app:popupTheme="@style/Theme.AutomatedToolTrayBuilder.PopupOverlay" />
-
-    </com.google.android.material.appbar.AppBarLayout>
-
-    <include layout="@layout/content_main" />
-
-    <!--  <com.google.android.material.floatingactionbutton.FloatingActionButton
-          android:id="@+id/fab"
-          android:layout_width="wrap_content"
-          android:layout_height="wrap_content"
-          android:layout_gravity="bottom|end"
-          android:layout_margin="@dimen/fab_margin"
-          app:srcCompat="@android:drawable/ic_input_add" />-->
-
+    tools:context=".MainActivity" >
+    <LinearLayout
+      android:id="@+id/adLayout"
+      android:orientation="vertical"
+      android:layout_width="fill_parent"
+      android:layout_height="wrap_content"
+      android:layout_alignParentTop="true"
+      android:gravity="center" />
     <Button
-        android:id="@+id/button"
-        android:layout_width="wrap_content"
+        android:id="@+id/select_picture"
+        android:layout_width="160dp"
         android:layout_height="wrap_content"
-        android:text="Button" />
-
-   <!-- <android.support.v7.widget.RecyclerView
-        android:id="@+id/imagegallery"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        />-->
-</androidx.coordinatorlayout.widget.CoordinatorLayout>
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true"
+        android:drawableRight="@drawable/gallery"
+        android:textColor="#ffeeeeee" 
+        android:background="@drawable/command_background"        
+        android:paddingRight="10dp"
+        android:paddingBottom="10dp"
+        android:paddingTop="10dp"
+        android:layout_margin="3dp"
+        android:text="@string/select_a_photo" />
+    <Button
+        android:id="@+id/take_picture"
+        android:layout_width="160dp"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/select_picture"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true"
+        android:layout_margin="3dp"
+        android:drawableRight="@drawable/camera"
+        android:textColor="#ffeeeeee" 
+        android:paddingRight="10dp"
+        android:paddingBottom="10dp"
+        android:paddingTop="10dp"
+        android:background="@drawable/command_background"        
+        android:text="@string/take_a_photo" />
+    <Button
+        android:id="@+id/about"
+        android:layout_width="160dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/select_picture"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true"
+        android:layout_margin="3dp"
+        android:drawableRight="@drawable/about"
+        android:textColor="#ffeeeeee" 
+        android:paddingRight="10dp"
+        android:paddingBottom="10dp"
+        android:paddingTop="10dp"
+        android:background="@drawable/command_background"        
+        android:text="@string/about" />
+</RelativeLayout>
